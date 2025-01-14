@@ -53,6 +53,10 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
   }
+
+  .type-filters button.active {
+    background-color: #e06666;
+}
   
   .type-filters button:hover {
     background-color: #073757;
@@ -65,6 +69,24 @@ body {
     padding: 1rem;
   }
   
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
   /* PokemonCard.css */
 .pokemon-card {
     border: 1px solid #fff;
@@ -74,53 +96,58 @@ body {
     padding: 1rem;
     text-align: center;
     transition: transform 0.2s;
-  }
-  
-  .pokemon-card:hover {
+    width: 15rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; 
+}
+
+.pokemon-card:hover {
     transform: scale(1.05);
-  }
-  
-  .pokemon-card img {
+}
+
+.pokemon-card img {
     width: 8rem;
     height: 8rem;
-  }
-  
-  .pokemon-types {
+    margin: 0 auto;
+}
+
+.pokemon-types {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .pokemon-type {
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-type {
     background-color: #eeeeee;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
-  }
-  
-  .pokemon-stats {
+}
+
+.pokemon-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .pokemon-stat {
+}
+
+.pokemon-stat {
     display: flex;
     justify-content: space-between;
     font-size: 1rem;
     background-color: #afd0ef;
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 5px;
-  }
-  
-  .stat-name {
+}
+
+.stat-name {
     color: #e06666;
     font-weight: bold;
-  }
-  
-  .stat-value {
+}
+
+.stat-value {
     color: #000;
-  }
-  
+}

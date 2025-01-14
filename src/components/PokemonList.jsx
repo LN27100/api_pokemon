@@ -42,7 +42,11 @@ function PokemonList() {
     }, [searchTerm, selectedType, pokemonList]);
 
     if (loading) {
-        return <div>Chargement en cours…</div>;
+        return (
+            <div className="loader-container">
+                <img src={pokeballImage} alt="Loading" className="loader" />
+            </div>
+        );
     }
 
     const types = [...new Set(pokemonList.flatMap(pokemon => pokemon.types.map(type => type.type.name)))];
@@ -61,9 +65,18 @@ function PokemonList() {
                 className="search-bar"
             />
             <div className="type-filters">
-                <button onClick={() => setSelectedType('')}>Tous</button>
+                <button
+                    className={selectedType === '' ? 'active' : ''}
+                    onClick={() => setSelectedType('')}
+                >
+                    Tous
+                </button>
                 {types.map(type => (
-                    <button key={type} onClick={() => setSelectedType(type)}>
+                    <button
+                        key={type}
+                        className={selectedType === type ? 'active' : ''}
+                        onClick={() => setSelectedType(type)}
+                    >
                         {type}
                     </button>
                 ))}
