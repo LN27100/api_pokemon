@@ -1,0 +1,126 @@
+body {
+    background-color: #fff;
+  }
+  
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  h1 {
+    color: #0b5394;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h2 {
+    color: #0b5394;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .pokeball-image {
+    width: 3rem;
+    height: auto;
+  }
+  
+  .search-bar {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 20%;
+    border: 2px solid #0b5394;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .type-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .type-filters button {
+    background-color: #0b5394;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .type-filters button:hover {
+    background-color: #073757;
+  }
+  
+  .pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* PokemonCard.css */
+.pokemon-card {
+    border: 1px solid #fff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .pokemon-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pokemon-card img {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .pokemon-type {
+    background-color: #eeeeee;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .pokemon-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .pokemon-stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    background-color: #afd0ef;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .stat-name {
+    color: #e06666;
+    font-weight: bold;
+  }
+  
+  .stat-value {
+    color: #000;
+  }
+  
